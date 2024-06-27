@@ -27,6 +27,14 @@ public class ModItemGroup {
 
                     }).build());
 
+    public static final ItemGroup MY_MOD = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(MCCourseMod.MOD_ID, "my_mod"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.my_mod"))
+                    .icon(() -> new ItemStack(ModItems.SUSPICIOUS_KEY)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.SUSPICIOUS_KEY);
+
+                    }).build());
+
 
     public static void registerItemGroups() {
 
